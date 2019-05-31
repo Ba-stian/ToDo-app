@@ -26,6 +26,9 @@ class Form extends React.Component {
 
     onSubmit = (e) => {
         e.preventDefault();
+        if(!this.state.content.length) {
+            return;
+        }
            this.props.addTodo(this.state);
         this.setState({
             content: ''
