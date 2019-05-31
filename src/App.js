@@ -29,11 +29,9 @@ class App extends React.Component {
 	addTodo = (todo) => {
 		todo.id = Math.random();
 		let todos = [...this.state.todos, todo];
-		if (todos.length !== 0) {
 			this.setState({
 				todos
 			})
-		}
 
 	}
 }
